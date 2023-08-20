@@ -79,5 +79,7 @@ return require('packer').startup(function(use)
 
 	use 'ethanholz/nvim-lastplace'
 
+	-- indentation vertical line
+	use "lukas-reineke/indent-blankline.nvim"
 end)
 
