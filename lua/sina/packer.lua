@@ -92,5 +92,8 @@ return require('packer').startup(function(use)
 
 	-- indentation vertical line
 	use "lukas-reineke/indent-blankline.nvim"
+
+	--  full signature help, docs and completion for the nvim lua API
+	use "folke/neodev.nvim"
 end)
 
