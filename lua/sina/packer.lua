@@ -5,8 +5,8 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
 	use { "tiagovla/tokyodark.nvim" }
-	
-  -- use { "catppuccin/nvim", as = "catppuccin" }
+
+  use { "catppuccin/nvim", as = "catppuccin" }
 
 	-- telescope find files
 	use {
@@ -95,5 +95,8 @@ return require('packer').startup(function(use)
 
 	--  full signature help, docs and completion for the nvim lua API
 	use "folke/neodev.nvim"
+
+	-- analogue.nvim
+	use '/home/sina/work/plugins/analogue.nvim'
 end)
 
