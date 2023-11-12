@@ -100,5 +100,9 @@ return require('packer').startup(function(use)
 
 	-- analogue.nvim
 	use '/home/sina/work/plugins/analogue.nvim'
+
+	-- numToStr/Comment.nvim
+	use { 'numToStr/Comment.nvim' }
+
 end)
 
