@@ -12,8 +12,7 @@ return require('packer').startup(function(use)
 
 	-- telescope find files
 	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.1',
-		-- or                            , branch = '0.1.x',
+		'nvim-telescope/telescope.nvim', tag = '*',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
@@ -99,7 +98,7 @@ return require('packer').startup(function(use)
 	use "folke/neodev.nvim"
 
 	-- analogue.nvim
-	use '/home/sina/work/plugins/analogue.nvim'
+	use "sinabyr/analogue.nvim"
 
 	-- numToStr/Comment.nvim
 	use { 'numToStr/Comment.nvim' }
