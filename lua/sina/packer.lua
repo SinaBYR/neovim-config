@@ -103,5 +103,8 @@ return require('packer').startup(function(use)
 	-- numToStr/Comment.nvim
 	use { 'numToStr/Comment.nvim' }
 
+	-- golang setup
+	use 'ray-x/go.nvim'
+	use 'ray-x/guihua.lua'
 end)
 
