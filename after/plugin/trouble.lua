@@ -1,2 +1,2 @@
-vim.keymap.set("n", "<leader>q", function() require("trouble").toggle() end)
+vim.keymap.set("n", "<leader>q", function() require("trouble").toggle("diagnostics") end)
 
