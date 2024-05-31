@@ -106,5 +106,7 @@ return require('packer').startup(function(use)
 	-- golang setup
 	use 'ray-x/go.nvim'
 	use 'ray-x/guihua.lua'
+
+	use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 end)
 
