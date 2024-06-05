@@ -8,11 +8,12 @@ return require('packer').startup(function(use)
 
 	use { "tiagovla/tokyodark.nvim" }
 
+	use "rebelot/kanagawa.nvim"
   use { "catppuccin/nvim", as = "catppuccin" }
 
 	-- telescope find files
 	use {
-		'nvim-telescope/telescope.nvim', tag = '*',
+		'nvim-telescope/telescope.nvim', tag = '0.1.8',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
@@ -72,6 +73,7 @@ return require('packer').startup(function(use)
 
 	use {
 		"folke/trouble.nvim",
+		tag = "v2.10.0",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		opts = {
 			icons = false,
@@ -108,5 +110,7 @@ return require('packer').startup(function(use)
 	use 'ray-x/guihua.lua'
 
 	use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+
+	use 'dstein64/nvim-scrollview'
 end)
 

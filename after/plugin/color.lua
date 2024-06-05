@@ -100,7 +100,23 @@ require("tokyonight").setup({
   on_highlights = function(highlights, colors) end,
 })
 
-vim.cmd("colorscheme tokyonight")
+-- vim.cmd("colorscheme tokyonight")
+
+require('kanagawa').setup({
+	transparent = true,
+})
+vim.cmd("colorscheme kanagawa-wave")
+
+vim.cmd('hi LineNr guibg=NONE')
+vim.cmd("hi SignColumn guibg=NONE")
+
+-- gitsigns highlight groups
+vim.cmd("hi GitSignsAdd guibg=NONE")
+vim.cmd("hi GitSignsChange guibg=NONE")
+vim.cmd("hi GitSignsDelete guibg=NONE")
+
+-- fold column color
+vim.cmd("hi FoldColumn guibg=NONE")
 
 -- setup must be called before loading
 
