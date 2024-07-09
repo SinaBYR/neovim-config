@@ -21,6 +21,6 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 -- edit the word I'm currently on
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
-vim.keymap.set("n", "<A-l>", "20zl")
-vim.keymap.set("n", "<A-h>", "20zh")
+vim.keymap.set("n", "<S-l>", "20zl")
+vim.keymap.set("n", "<S-h>", "20zh")
 
