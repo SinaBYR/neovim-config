@@ -13,29 +13,31 @@ return require('packer').startup(function(use)
 
 	-- telescope find files
 	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.8',
-		requires = { {'nvim-lua/plenary.nvim'} }
+		'nvim-telescope/telescope.nvim',
+		tag = '0.1.8',
+		requires = {
+			{'nvim-lua/plenary.nvim'}
+		}
 	}
+
+	use {'neovim/nvim-lspconfig'}
+	use {'williamboman/mason.nvim'}
+	use {'williamboman/mason-lspconfig.nvim'}
+	use {'hrsh7th/nvim-cmp'}
+	use {'hrsh7th/cmp-nvim-lsp'}
+	use {'hrsh7th/cmp-buffer'}
+	use {'saadparwaiz1/cmp_luasnip'}
+	use({
+		"L3MON4D3/LuaSnip",
+		-- follow latest release.
+		tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+		-- install jsregexp (optional!:).
+		run = "make install_jsregexp"
+	})
 
 	-- syntax highlighting
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-  use('theprimeagen/harpoon')
   use('mbbill/undotree')
-	use {
-		'VonHeikemen/lsp-zero.nvim',
-		branch = 'v2.x',
-		requires = {
-			-- LSP Support
-			{'neovim/nvim-lspconfig'},             -- Required
-			{'williamboman/mason.nvim'},           -- Optional
-			{'williamboman/mason-lspconfig.nvim'}, -- Optional
-
-			-- Autocompletion
-			{'hrsh7th/nvim-cmp'},     -- Required
-			{'hrsh7th/cmp-nvim-lsp'}, -- Required
-			{'L3MON4D3/LuaSnip'},     -- Required
-		}
-	}
 
   -- vertical bars on indentations
   use({
@@ -99,7 +101,6 @@ return require('packer').startup(function(use)
 	--  full signature help, docs and completion for the nvim lua API
 	use "folke/neodev.nvim"
 
-	-- analogue.nvim
 	use "sinabyr/analogue.nvim"
 
 	-- numToStr/Comment.nvim
@@ -109,6 +110,7 @@ return require('packer').startup(function(use)
 	use 'ray-x/go.nvim'
 	use 'ray-x/guihua.lua'
 
+	-- expand/collapse
 	use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 
 	use 'dstein64/nvim-scrollview'
