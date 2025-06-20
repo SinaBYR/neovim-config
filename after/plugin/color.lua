@@ -62,10 +62,10 @@
 -- 	custom_palette = {} or function(palette) return {} end, -- extend palette
 -- 	terminal_colors = true, -- enable terminal colors
 -- })
--- 
+
 -- vim.cmd("colorscheme tokyodark")
 
--- require("tokyonight").setup({
+-- require("tokyodark").setup({
 --   -- your configuration comes here
 --   -- or leave it empty to use the default settings
 --   style = "night", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
@@ -100,15 +100,28 @@
 --   on_highlights = function(highlights, colors) end,
 -- })
 
+-- vim.g.tokyonight_style = "night"              -- "storm", "moon", or "night"
+-- vim.g.tokyonight_transparent = true           -- Enable transparent background
+-- vim.g.tokyonight_enable_italic = true         -- Optional: Italics
 -- vim.cmd("colorscheme tokyonight")
 
-require('kanagawa').setup({
-	transparent = true,
-})
-vim.cmd("colorscheme kanagawa-wave")
+-- require('kanagawa').setup({
+-- 	transparent = true,
+-- })
+-- vim.cmd("colorscheme kanagawa-wave")
 
 vim.cmd('hi LineNr guibg=NONE')
 vim.cmd("hi SignColumn guibg=NONE")
+vim.cmd [[
+	hi Normal       guibg=NONE ctermbg=NONE
+	hi NormalNC     guibg=NONE ctermbg=NONE
+	hi EndOfBuffer  guibg=NONE ctermbg=NONE
+	hi LineNr       guibg=NONE ctermbg=NONE
+	hi SignColumn   guibg=NONE ctermbg=NONE
+	hi VertSplit    guibg=NONE ctermbg=NONE
+	hi StatusLine   guibg=NONE ctermbg=NONE
+	hi WinSeparator guibg=NONE ctermbg=NONE
+]]
 
 -- gitsigns highlight groups
 vim.cmd("hi GitSignsAdd guibg=NONE")

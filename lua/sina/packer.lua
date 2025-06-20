@@ -6,7 +6,19 @@ return require('packer').startup(function(use)
 
 	use { "folke/tokyonight.nvim" }
 
-	use { "tiagovla/tokyodark.nvim" }
+	-- use { "tiagovla/tokyodark.nvim" }
+	use {
+    "tiagovla/tokyodark.nvim",
+    opts = {
+			transparent_background = true, -- set background to transparent
+    },
+    config = function(_, opts)
+        require("tokyodark").setup(opts) -- calling setup is optional
+				vim.opt.termguicolors = true
+
+        vim.cmd [[colorscheme tokyodark]]
+    end,
+	}
 
 	use "rebelot/kanagawa.nvim"
   use { "catppuccin/nvim", as = "catppuccin" }
