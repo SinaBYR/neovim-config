@@ -4,24 +4,20 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-	use { "folke/tokyonight.nvim" }
+	use { "catppuccin/nvim", as = "catppuccin" }
+	-- use {
+ --    "tiagovla/tokyodark.nvim",
+ --    opts = {
+	-- 		transparent_background = true, -- set background to transparent
+ --    },
+ --    config = function(_, opts)
+ --    --     require("tokyodark").setup(opts) -- calling setup is optional
+	-- 			-- vim.opt.termguicolors = true
+	-- 			--
+ --    --     vim.cmd [[colorscheme tokyodark]]
+ --    end,
+	-- }
 
-	-- use { "tiagovla/tokyodark.nvim" }
-	use {
-    "tiagovla/tokyodark.nvim",
-    opts = {
-			transparent_background = true, -- set background to transparent
-    },
-    config = function(_, opts)
-        require("tokyodark").setup(opts) -- calling setup is optional
-				vim.opt.termguicolors = true
-
-        vim.cmd [[colorscheme tokyodark]]
-    end,
-	}
-
-	use "rebelot/kanagawa.nvim"
-  use { "catppuccin/nvim", as = "catppuccin" }
 
 	-- telescope find files
 	use {
@@ -32,9 +28,7 @@ return require('packer').startup(function(use)
 		}
 	}
 
-	use {'neovim/nvim-lspconfig'}
 	use {'williamboman/mason.nvim'}
-	use {'williamboman/mason-lspconfig.nvim'}
 	use {'hrsh7th/nvim-cmp'}
 	use {'hrsh7th/cmp-nvim-lsp'}
 	use {'hrsh7th/cmp-buffer'}
@@ -48,20 +42,20 @@ return require('packer').startup(function(use)
 	})
 
 	-- syntax highlighting
-  use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-  use('mbbill/undotree')
+	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+	use('mbbill/undotree')
 
-  -- vertical bars on indentations
-  use({
-    "utilyre/barbecue.nvim",
-    tag = "*",
-    requires = {
-      "SmiteshP/nvim-navic",
-    },
-    config = function()
-      require("barbecue").setup()
-    end,
-  })
+	-- vertical bars on indentations
+	use({
+		"utilyre/barbecue.nvim",
+		tag = "*",
+		requires = {
+			"SmiteshP/nvim-navic",
+		},
+		config = function()
+			require("barbecue").setup()
+		end,
+	})
 
 	-- highlight same words
 	use { 'yamatsum/nvim-cursorline' }
