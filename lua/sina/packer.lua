@@ -4,6 +4,12 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+	use { 'Shatur/neovim-ayu' }
+
+	use { 'rebelot/kanagawa.nvim' }
+
+	use 'navarasu/onedark.nvim'
+
 	use { "catppuccin/nvim", as = "catppuccin" }
 	-- use {
  --    "tiagovla/tokyodark.nvim",
@@ -22,7 +28,6 @@ return require('packer').startup(function(use)
 	-- telescope find files
 	use {
 		'nvim-telescope/telescope.nvim',
-		tag = '0.1.8',
 		requires = {
 			{'nvim-lua/plenary.nvim'}
 		}
@@ -42,7 +47,8 @@ return require('packer').startup(function(use)
 	})
 
 	-- syntax highlighting
-	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+	-- use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use('mbbill/undotree')
 
 	-- vertical bars on indentations
@@ -110,7 +116,7 @@ return require('packer').startup(function(use)
 	use "sinabyr/analogue.nvim"
 
 	-- numToStr/Comment.nvim
-	use { 'numToStr/Comment.nvim' }
+	-- use { 'numToStr/Comment.nvim' }
 
 	-- golang setup
 	use 'ray-x/go.nvim'

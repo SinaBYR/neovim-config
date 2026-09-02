@@ -2,6 +2,7 @@ vim.opt.guicursor = "i-ci:hor25"
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
+-- vim.opt.clipboard = "unnamedplus"
 
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
@@ -26,5 +27,4 @@ vim.opt.scrolloff = 8
 vim.opt.colorcolumn = "85"
 
 vim.g.mapleader = " "
-
 
