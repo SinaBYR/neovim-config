@@ -27,6 +27,32 @@ require('onedark').setup({
 			TSKeyword = { fg = '$green' },
 			TSString = { fg = '$orange', fmt = 'bold' },
 			['@field'] = { fg = '$yellow' },
+ 
+			-- Barbar: give the active tab a real, solid background so it
+			-- stands out against everything else (which stays transparent).
+			BufferCurrent       = { fg = '$fg',        bg = '$bg2', fmt = 'bold' },
+			BufferCurrentIndex  = { fg = '$blue',       bg = '$bg2' },
+			BufferCurrentMod    = { fg = '$yellow',     bg = '$bg2', fmt = 'bold' },
+			BufferCurrentSign   = { fg = '$blue',       bg = '$bg2' },
+			BufferCurrentTarget = { fg = '$red',        bg = '$bg2', fmt = 'bold' },
+
+			-- Visible-but-not-focused tabs (in a split): a step down from Current
+			BufferVisible       = { fg = '$light_grey', bg = 'NONE' },
+			BufferVisibleIndex  = { fg = '$light_grey', bg = 'NONE' },
+			BufferVisibleMod    = { fg = '$dark_yellow',bg = 'NONE' },
+			BufferVisibleSign   = { fg = '$grey',       bg = 'NONE' },
+
+			-- Fully inactive tabs: dim, blends into transparent bg
+			BufferInactive      = { fg = '$grey',       bg = 'NONE' },
+			BufferInactiveIndex = { fg = '$grey',       bg = 'NONE' },
+			BufferInactiveMod   = { fg = '$dark_yellow',bg = 'NONE' },
+			BufferInactiveSign  = { fg = '$grey',       bg = 'NONE' },
+
+			BufferAlternate     = { fg = '$light_grey', bg = 'NONE' },
+			BufferAlternateSign = { fg = '$light_grey', bg = 'NONE' },
+
+			BufferTabpages      = { fg = '$bg_d',       bg = '$blue', fmt = 'bold' },
+			BufferTabpageFill   = { bg = 'NONE' },
 		},
 
     diagnostics = {
